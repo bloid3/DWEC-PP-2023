@@ -1,1 +1,1 @@
-conso1e.log("Hola Mundo");
+console.log("Hola Mundo");
