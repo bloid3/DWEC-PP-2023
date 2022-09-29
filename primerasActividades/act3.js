@@ -1,0 +1,10 @@
+let num1 = prompt("Introduce el número 1")
+let num2 = prompt("Introduce el número 2")
+let num3 = prompt("Introduce el número 3")
+
+if (num1 > 10)
+	document.write(`El número ${num1} es mayor que 10`)
+else if (num2 > 10)
+	document.write(`El número ${num2} es mayor que 10`)
+else if (num3 > 10)
+	document.write(`El número ${num3} es mayor que 10`)
