@@ -1,4 +1,2 @@
-function suma(a, b) {
-	return (a + b)
-}
+var suma = (a,b) => {return a + b}
 document.write(suma(56,789))
