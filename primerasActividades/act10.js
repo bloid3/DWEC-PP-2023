@@ -7,7 +7,4 @@ while (lista[i] != -1) {
 		comprobar = true
 	i++
 }
-if (comprobar == true)
-	document.write("SI")
-else
-	document.write("NO")
+comprobar ? document.write("SI") : document.write("NO")
