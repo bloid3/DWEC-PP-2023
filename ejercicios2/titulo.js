@@ -5,3 +5,7 @@ function hora() {
 	var now  = today.toLocaleTimeString(`es-ES`);
 	document.title = `La hora es ${now}`;
 }
+function parar() {
+	clearInterval(idA);
+	document.title= "Hora parada"
+}
