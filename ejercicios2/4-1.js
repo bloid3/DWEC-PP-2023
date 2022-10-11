@@ -6,3 +6,5 @@ while (i < 10) {
 	i++;
 }
 document.write(nombres)
+document.write('<br>')
+document.write(`Hay ${nombres.length} nombres`)
