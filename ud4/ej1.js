@@ -37,3 +37,4 @@ function borrarElementos(){
     // Borrar toda la etiqueta
     //document.getElementById("idResultado").remove()
 }
+
