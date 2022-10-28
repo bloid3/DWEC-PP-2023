@@ -1,12 +1,16 @@
 
 function aficiones() {
 	let x = document.getElementsByTagName("input");
-	if (document.querySelectorAll("div p").length == 0) {
-		for (let i = 0; i < x.length; i++) {
+	let divs = document.querySelectorAll("div");
+	
+	for (let i = 0; i < x.length; i++) {
+		if (divs[i].getElementsByTagName("p").length == 0) {
 			if (x[i] != "") {
-				document.getElementsByTagName("div")[`${i}`].appendChild(document.createElement("p")).innerHTML = x[i].value;
+				divs[`${i}`].appendChild(document.createElement("p")).innerHTML = x[i].value;
+				divs[`${i}`].getElementsByTagName("p").className = "azul";
 			}
+		} else {
+			divs[i].getElementsByTagName("p")[0].innerHTML = x[i].value;
 		}
-		creado = true;
 	}
 }
