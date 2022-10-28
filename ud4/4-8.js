@@ -1,5 +1,8 @@
 function aficiones() {
-	document.getElementById("res_dep").innerHTML = document.getElementById("deporte").value;
-	document.getElementById("res_ser").innerHTML = document.getElementById("serie").value;
-	document.getElementById("res_pel").innerHTML = document.getElementById("pelicula").value;
+	let x = document.getElementsByTagName("input");
+	for (let i = 0; i < x.length; i++) {
+		if (x[i] != "") {
+			document.getElementsByTagName("div")[`${i}`].appendChild(document.createElement("p")).innerHTML = x[i].value;
+		}
+	}
 }
