@@ -44,15 +44,14 @@ let PCGaming = new Productos("PCGaming", "Ordenadores", 2, 999.49)
 let Aspiradora = new Productos("Aspiradora", "Hogar", 3, 209.99)
 
 class Televisores extends Productos {
-	constructor(nombre, categoria, unidades, precio, tamanio) {
-		super(nombre, unidades, precio)
-		categoria = "Televisores"
+	constructor(nombre, unidades, precio, tamanio) {
+		super(nombre, "Televisiones", unidades, precio)
+		this._categoria = "Televisiones"
 		this._tamanio = tamanio
 	}
 
 	getInfo() {
-		super.getInfo(),
-		console.log(` Tamaño: ${this._tamanio}`)
+		super.getInfo()
 	}
 }
 
