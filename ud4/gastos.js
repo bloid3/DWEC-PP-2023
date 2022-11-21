@@ -15,5 +15,11 @@ function ordenarLista(idUl){
     let ul = document.getElementById(idUl);    
     let lista = ul.getElementsByTagName("li");
     let arrayGastos = Array.from(lista);
-    arrayGastos.sort((a, b) => a.textContent.localeCompare(b.textContent)).forEach(li => ul.appendChild(li));  
+    arrayGastos.sort((a, b) => a.textContent.localeCompare(b.textContent)).forEach(li => ul.appendChild(li));
+	for(let i= 0; i< arrayGastos.length; i++){
+		arrayGastos[i].setAttribute(onClick,'borrarProducto(this)');
+	} 
+}
+function borrarProducto(element){
+	element.innerHTML = "hola";
 }
