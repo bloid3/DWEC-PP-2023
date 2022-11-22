@@ -1,14 +1,16 @@
 function anadirGasto() {
 	let gasto = document.getElementById("gasto").value;
-	if (gasto != "") {
-		document.getElementById("lista").appendChild(document.createElement("li")).innerHTML = gasto
-		document.getElementById("gasto").value = ""
+	if (comprobarGasto(gasto) != 1) {
+		if (gasto != "") {
+			document.getElementById("lista").appendChild(document.createElement("li")).innerHTML = gasto
+			document.getElementById("gasto").value = ""
+		}
+		let lista = gasto.split(": ")
+		let valor = parseInt(lista[1])
+		valor += parseInt(document.getElementById("idImporteTotal").innerHTML)
+		document.getElementById("idImporteTotal").innerHTML = valor
+		ordenarLista("lista")
 	}
-	let lista = gasto.split(": ")
-	let valor = parseInt(lista[1])
-	valor += parseInt(document.getElementById("idImporteTotal").innerHTML)
-	document.getElementById("idImporteTotal").innerHTML = valor
-	ordenarLista("lista")
 }
 
 function ordenarLista(idUl){
@@ -27,7 +29,7 @@ function aniadirOnclick() {
 	}
 }
 function borrarProducto(e) {
-	//CLASSLIST
+	//CLASSNAME
 	if (e.getAttribute("style") != "color:red") {
 		e.setAttribute("style", "color:red");
 		valor = e.innerHTML;
@@ -41,4 +43,16 @@ function borrarProducto(e) {
 		let importe = parseInt(document.getElementById("idImporteTotal").innerHTML) 
 		document.getElementById("idImporteTotal").innerHTML = importe + parseInt(k[1]);
 	}
+}
+
+function comprobarGasto(e) {
+	let valores = e.split()
+	let existe = 0;
+	let lista = document.getElementsByTagName("li");
+	for (let i = 0; i < lista.length; i++) {
+		let vaLista = lista[i].innerHTML.split(" : ")
+		if (vaLista[0].localeCompare(valores[0]) == 0)
+			existe = 1;
+	}
+	return existe;
 }
