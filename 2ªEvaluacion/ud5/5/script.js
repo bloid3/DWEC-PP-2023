@@ -9,6 +9,7 @@ function porEncima(e) {
 	nuevaImg.setAttribute("src",`img/600x400/coche-${numImg}.jpg`)
 	nuevaImg.setAttribute("id", "imgPrin")
 	document.getElementsByClassName("imagen-principal")[0].appendChild(nuevaImg)
+	//e.preventDefault();
 }
 
 function cambiarImg() {
