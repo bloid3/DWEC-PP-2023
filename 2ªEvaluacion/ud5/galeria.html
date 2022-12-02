@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ficha producto - imágenes</title>
+    <script src="script.js" defer></script>
+    <meta name="author" content="francesc ricart">
+    <style>
+        *{box-sizing:border-box;}
+        div{
+            float:left;
+        }
+        .contenedor-producto{
+            width:600px;
+            height:500px;
+            margin:auto;        
+        }
+
+        .imagen-principal{
+            width:100%;
+            height:400px;
+            border:1px solid #ff0000;
+        }
+        [class *= "subImagen-"]{
+            width:25%;
+            height:100px;
+            border:1px solid #0000ff;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>    
+    <div class="contenedor-producto">
+        <div class="imagen-principal"><img id="imgPrin" src="" alt=""></div>
+        <div class="subImagen-1"><img src="img/coche-1.jpg" alt=""></div>
+        <div class="subImagen-2"><img src="img/coche-2.jpg" alt=""></div>
+        <div class="subImagen-3"><img src="img/coche-3.jpg" alt=""></div>
+        <div class="subImagen-4"><img src="img/coche-4.jpg" alt=""></div>
+    </div>
+	<input type="button" value="Cambiar Imagen" onclick=cambiarImg()>
+</body>
+</html>
