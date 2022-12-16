@@ -16,23 +16,33 @@
     <br>
     <br>
       <!-- ÁREA de RadioButton  : si , no , nsnc -->    
-		<label for="sí">Sí</label><input type="radio" name="test" value="value1" id="si"> <br>
-		<label for="no">No</label><input type="radio" name="test" value="value2" id="no"> <br>
-		<label for="nsnc">No sabe no contesta</label><input type="radio" name="test" value="value3" id="nsnc"> <br>
+		<label for="sí">Sí</label><input type="radio" name="test" value="Sí" id="si"> <br>
+		<label for="no">No</label><input type="radio" name="test" value="No" id="no"> <br>
+		<label for="nsnc">No sabe no contesta</label><input type="radio" name="test" value="No sabe no contesta" id="nsnc"> <br>
     <br>
     <!-- ÁREA de checkbox  : condiciones y privacidad -->   
 		<label for="condiciones">He leído las condiciones y la privacidad etc etc zzzzzz</label><input type="checkbox" name="" id="condiciones"> <br>
     <br>
     <!-- ÁREA de Select  : primer, segundo, tercer, cuarto -->   
 		<label for="select">Selecciona una opción: </label> <select name="select" id="select">
-			<option value="p">Primer</option> 
-			<option value="s">Segundo</option>
-			<option value="t">Tercer</option>
-			<option value="c">Cuarto</option>
+			<option value="x">---Selecciona un valor---</option>
+			<option value="Primero">Primer</option> 
+			<option value="Segundo">Segundo</option>
+			<option value="Tercero">Tercer</option>
+			<option value="Cuarto">Cuarto</option>
 		</select>
     <br>
     <!-- ÁREA de input list + DataList : primer, segundo, tercer, cuarto --> 
-		
+	<label for="paises">Elige tu país de nacimiento: </label>
+	<input list="idPaises" id="paises" name="paises">
+	
+	<datalist id="idPaises">
+		<option value="España">
+		<option value="Marruecos">
+		<option value="Francia">
+		<option value="Croacia">
+		<option value="Argentina">
+	</datalist>
     <br>
     <br>
 
